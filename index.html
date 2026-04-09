@@ -35,12 +35,14 @@ img{max-width:100%;display:block;}
 a{text-decoration:none;color:inherit;}
 
 /* ── LAUNCH BANNER ── */
-.launch-banner{background:var(--dark);color:var(--white);text-align:center;padding:10px 16px;font-size:13px;font-weight:500;position:sticky;top:0;z-index:1000;}
+.launch-banner{background:var(--dark);color:var(--white);text-align:center;padding:10px 16px;font-size:13px;font-weight:500;position:fixed;top:0;left:0;right:0;z-index:1000;transition:transform .3s ease;}
 .launch-banner strong{color:var(--orange);}
 .launch-banner a{color:var(--green);font-weight:700;margin-left:8px;}
 
 /* ── NAV ── */
-nav{background:var(--white);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:40px;z-index:999;}
+nav{background:var(--white);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;position:fixed;top:40px;left:0;right:0;z-index:999;transition:transform .3s ease;}
+.nav-hidden{transform:translateY(-100px);}
+.hero{margin-top:90px;}
 .nav-logo{font-size:20px;font-weight:800;color:var(--dark);display:flex;align-items:center;gap:8px;}
 .nav-logo-icon{width:32px;height:32px;border-radius:8px;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:var(--white);}
 .nav-cta{background:var(--green);color:var(--white);padding:9px 20px;border-radius:20px;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:all .2s;}
@@ -438,7 +440,7 @@ footer{background:var(--dark);padding:40px 24px;}
     <div class="allfeat-grid">
       <div class="allfeat-item fade-up"><div class="allfeat-icon">⏱️</div><div><div class="allfeat-title" id="af1t">Real-time timer</div><div class="allfeat-desc" id="af1d">Keeps running even when you close the app. Pause and resume anytime.</div></div></div>
       <div class="allfeat-item fade-up"><div class="allfeat-icon">📋</div><div><div class="allfeat-title" id="af2t">Log full weeks at once</div><div class="allfeat-desc" id="af2d">Forgot to log? Add an entire week of shifts in one go with expenses per day.</div></div></div>
-      <div class="allfeat-item fade-up"><div class="allfeat-icon">🧾</div><div><div class="allfeat-title" id="af3t">Expense tracking with receipts</div><div class="allfeat-desc" id="af3d">Photo receipts attached to shifts. Expenses appear automatically on invoices.</div></div></div>
+      <div class="allfeat-item fade-up"><div class="allfeat-icon">🧾</div><div><div class="allfeat-title" id="af3t">Expense tracking with receipts</div><div class="allfeat-desc" id="af3d">Save receipt photos for each expense. Access them anytime if the family requests proof.</div></div></div>
       <div class="allfeat-item fade-up"><div class="allfeat-icon">📊</div><div><div class="allfeat-title" id="af4t">Financial dashboard</div><div class="allfeat-desc" id="af4d">6-month earnings chart, monthly goals and income breakdown by family.</div></div></div>
       <div class="allfeat-item fade-up"><div class="allfeat-icon">🔔</div><div><div class="allfeat-title" id="af5t">Smart notifications</div><div class="allfeat-desc" id="af5d">Overtime alerts, payment reminders and upcoming schedule events.</div></div></div>
       <div class="allfeat-item fade-up"><div class="allfeat-icon">🌎</div><div><div class="allfeat-title" id="af6t">3 languages</div><div class="allfeat-desc" id="af6d">English, Portuguese and Spanish. Switch anytime without losing data.</div></div></div>
@@ -595,7 +597,7 @@ const COPY = {
     'af-label':'Full feature list','allfeat-title':'Everything included','allfeat-sub':'50+ features, one price',
     'af1t':'Real-time timer','af1d':'Keeps running even when you close the app. Pause and resume anytime.',
     'af2t':'Log full weeks at once','af2d':'Forgot to log? Add an entire week of shifts with expenses per day.',
-    'af3t':'Expense tracking with receipts','af3d':'Photo receipts attached to shifts. Appear automatically on invoices.',
+    'af3t':'Expense tracking with receipts','af3d':'Save receipt photos for each expense. Access them anytime if the family requests proof.',
     'af4t':'Financial dashboard','af4d':'6-month earnings chart, monthly goals and income breakdown.',
     'af5t':'Smart notifications','af5d':'Overtime alerts, payment reminders and upcoming schedule events.',
     'af6t':'3 languages','af6d':'English, Portuguese and Spanish. Switch anytime without losing data.',
@@ -678,7 +680,7 @@ const COPY = {
     'af-label':'Lista completa','allfeat-title':'Tudo incluído','allfeat-sub':'50+ funcionalidades, um preço',
     'af1t':'Timer em tempo real','af1d':'Continua rodando mesmo com o app fechado. Pause e retome.',
     'af2t':'Registre semanas inteiras','af2d':'Esqueceu de registrar? Adicione uma semana inteira com despesas por dia.',
-    'af3t':'Despesas com foto de recibo','af3d':'Fotos dos recibos anexadas. Aparecem automaticamente nas faturas.',
+    'af3t':'Despesas com foto de recibo','af3d':'Salve fotos dos recibos em cada despesa. Acesse quando a família solicitar comprovante.',
     'af4t':'Painel financeiro','af4d':'Gráfico de 6 meses, metas mensais e resumo por família.',
     'af5t':'Notificações inteligentes','af5d':'Alertas de hora extra, lembretes de pagamento e próximos eventos.',
     'af6t':'3 idiomas','af6d':'Inglês, Português e Espanhol. Troque sem perder dados.',
@@ -761,7 +763,7 @@ const COPY = {
     'af-label':'Lista completa','allfeat-title':'Todo incluido','allfeat-sub':'50+ funciones, un precio',
     'af1t':'Cronómetro en tiempo real','af1d':'Sigue corriendo aunque cierres la app. Pausa y reanuda.',
     'af2t':'Registra semanas completas','af2d':'¿Olvidaste registrar? Agrega una semana entera con gastos por día.',
-    'af3t':'Gastos con foto de recibo','af3d':'Fotos adjuntas a los turnos. Aparecen automáticamente en las facturas.',
+    'af3t':'Gastos con foto de recibo','af3d':'Guarda fotos de recibos en cada gasto. Accede cuando la familia solicite comprobante.',
     'af4t':'Panel financiero','af4d':'Gráfico de 6 meses, metas mensuales y resumen por familia.',
     'af5t':'Notificaciones inteligentes','af5d':'Alertas de horas extra, recordatorios de pago y próximos eventos.',
     'af6t':'3 idiomas','af6d':'Inglés, Portugués y Español. Cambia sin perder datos.',
@@ -848,6 +850,24 @@ const observer=new IntersectionObserver(entries=>{
 document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el))
 
 renderFaqs('en')
+
+// Hide nav on scroll down, show on scroll up
+let lastScroll = 0
+const nav = document.querySelector('nav')
+const banner = document.querySelector('.launch-banner')
+window.addEventListener('scroll', () => {
+  const cur = window.scrollY
+  if (cur > lastScroll && cur > 100) {
+    nav.classList.add('nav-hidden')
+    banner.style.transform = 'translateY(-100%)'
+    nav.style.transform = 'translateY(-140px)'
+  } else {
+    nav.classList.remove('nav-hidden')
+    banner.style.transform = 'translateY(0)'
+    nav.style.transform = 'translateY(0)'
+  }
+  lastScroll = cur
+}, {passive: true})
 </script>
 </body>
 </html>
