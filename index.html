@@ -35,14 +35,13 @@ img{max-width:100%;display:block;}
 a{text-decoration:none;color:inherit;}
 
 /* ── LAUNCH BANNER ── */
-.launch-banner{background:var(--dark);color:var(--white);text-align:center;padding:10px 16px;font-size:13px;font-weight:500;position:fixed;top:0;left:0;right:0;z-index:1000;transition:transform .3s ease;}
+.launch-banner{background:var(--dark);color:var(--white);text-align:center;padding:10px 16px;font-size:13px;font-weight:500;position:fixed;top:0;left:0;right:0;z-index:1000;transition:transform .35s ease;}
 .launch-banner strong{color:var(--orange);}
 .launch-banner a{color:var(--green);font-weight:700;margin-left:8px;}
 
 /* ── NAV ── */
-nav{background:var(--white);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;position:fixed;top:40px;left:0;right:0;z-index:999;transition:transform .3s ease;}
-.nav-hidden{transform:translateY(-100px);}
-.hero{margin-top:90px;}
+nav{background:var(--white);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;position:fixed;top:40px;left:0;right:0;z-index:999;transition:top .3s ease;}
+.hero{padding-top:140px;}
 .nav-logo{font-size:20px;font-weight:800;color:var(--dark);display:flex;align-items:center;gap:8px;}
 .nav-logo-icon{width:32px;height:32px;border-radius:8px;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:var(--white);}
 .nav-cta{background:var(--green);color:var(--white);padding:9px 20px;border-radius:20px;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:all .2s;}
@@ -252,7 +251,7 @@ footer{background:var(--dark);padding:40px 24px;}
 
 <!-- LAUNCH BANNER -->
 <div class="launch-banner">
-  🔥 <strong id="banner-text">Launch offer — First 20 buyers: $24.90 → $9.99</strong> · <span id="banner-spots">14 spots remaining</span>
+  🔥 <strong id="banner-text">Launch offer — First 20 buyers: $49.90 → $24.90</strong> · <span id="banner-spots">14 spots remaining</span>
   <a href="#pricing" id="banner-cta">Claim Offer →</a>
 </div>
 
@@ -285,7 +284,7 @@ footer{background:var(--dark);padding:40px 24px;}
   <h1 id="hero-title">Get Paid What You Deserve.<br>Every Hour. Every Week.</h1>
   <p id="hero-sub">The app built for caregivers — tracks hours, calculates overtime automatically and generates professional invoices in seconds.</p>
   <div class="hero-ctas">
-    <a href="#pricing"><button class="btn-primary" id="hero-cta1">Get NannyTrack — $9.99</button></a>
+    <a href="#pricing"><button class="btn-primary" id="hero-cta1">Get NannyTrack — $24.90</button></a>
     <a href="#how"><button class="btn-secondary" id="hero-cta2">See How It Works ↓</button></a>
   </div>
   <div class="hero-note" id="hero-note">One-time payment · No subscription · Works on iPhone & Android · 7-day guarantee</div>
@@ -483,6 +482,96 @@ footer{background:var(--dark);padding:40px 24px;}
   </div>
 </section>
 
+<!-- LAUNCH OFFER URGENCY -->
+<section style="background:linear-gradient(135deg,#1a1a2e,#2d2d4e);padding:52px 24px;text-align:center;">
+  <div style="max-width:600px;margin:0 auto;">
+    <div style="display:inline-block;background:#F5A623;color:#1a1a2e;font-size:12px;font-weight:800;padding:6px 16px;border-radius:20px;margin-bottom:20px;letter-spacing:1px;" id="urgency-badge">🔥 LIMITED TIME OFFER</div>
+    <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(28px,5vw,44px);color:#fff;font-weight:800;line-height:1.15;margin-bottom:14px;" id="urgency-title">First 20 buyers get<br><span style="color:#43B02A;">50% off</span> — forever.</h2>
+    <p style="font-size:16px;color:rgba(255,255,255,0.75);margin-bottom:32px;line-height:1.6;" id="urgency-sub">After the first 20 sales, the price goes back to $49.90. No exceptions. No coupon needed — just buy now.</p>
+    <div style="display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:28px;">
+      <div style="text-align:center;">
+        <div style="font-size:18px;color:rgba(255,255,255,0.5);text-decoration:line-through;">$49.90</div>
+        <div style="font-size:56px;font-weight:900;color:#43B02A;font-family:'Bricolage Grotesque',sans-serif;line-height:1;">$24.90</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.6);" id="urgency-once">one-time · no subscription</div>
+      </div>
+      <div style="width:1px;height:80px;background:rgba(255,255,255,0.15);"></div>
+      <div style="text-align:left;">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,0.85);">
+            <span style="color:#43B02A;font-size:16px;">✓</span> <span id="ul1">Unlimited families</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,0.85);">
+            <span style="color:#43B02A;font-size:16px;">✓</span> <span id="ul2">All 50 states OT calculated</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,0.85);">
+            <span style="color:#43B02A;font-size:16px;">✓</span> <span id="ul3">Employment contract included</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,0.85);">
+            <span style="color:#43B02A;font-size:16px;">✓</span> <span id="ul4">Free updates forever</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,0.08);border-radius:14px;padding:16px 20px;margin-bottom:24px;border:1px solid rgba(255,255,255,0.12);">
+      
+      <!-- COUNTDOWN TIMER -->
+      <div style="margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.1);">
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:8px;letter-spacing:0.5px;" id="timer-label">OFFER EXPIRES IN</div>
+        <div style="display:flex;justify-content:center;gap:8px;">
+          <div style="text-align:center;">
+            <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:8px 12px;min-width:52px;">
+              <div style="font-size:24px;font-weight:800;color:#fff;font-family:'Bricolage Grotesque',sans-serif;line-height:1;" id="timer-h">23</div>
+            </div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px;" id="tl-h">hours</div>
+          </div>
+          <div style="font-size:24px;font-weight:800;color:rgba(255,255,255,0.3);line-height:1;padding-top:8px;">:</div>
+          <div style="text-align:center;">
+            <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:8px 12px;min-width:52px;">
+              <div style="font-size:24px;font-weight:800;color:#fff;font-family:'Bricolage Grotesque',sans-serif;line-height:1;" id="timer-m">59</div>
+            </div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px;" id="tl-m">min</div>
+          </div>
+          <div style="font-size:24px;font-weight:800;color:rgba(255,255,255,0.3);line-height:1;padding-top:8px;">:</div>
+          <div style="text-align:center;">
+            <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:8px 12px;min-width:52px;">
+              <div style="font-size:24px;font-weight:800;color:#F5A623;font-family:'Bricolage Grotesque',sans-serif;line-height:1;" id="timer-s">59</div>
+            </div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px;" id="tl-s">sec</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPOTS GRID 10x2 -->
+      <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-bottom:10px;" id="urgency-spots-label">spots remaining at launch price</div>
+      <div style="display:grid;grid-template-columns:repeat(10,1fr);gap:6px;max-width:340px;margin:0 auto;">
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:#E53935;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;">✓</div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:#E53935;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;">✓</div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:#E53935;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;">✓</div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:#E53935;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;">✓</div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:#E53935;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;">✓</div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:#E53935;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;">✓</div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:#43B02A;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;">YOU</div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);"></div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);"></div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);"></div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);"></div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);"></div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);"></div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);"></div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);"></div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);"></div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);"></div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);"></div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);"></div>
+        <div style="width:100%;aspect-ratio:1;border-radius:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);"></div>
+      </div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:10px;" id="urgency-legend">🔴 taken &nbsp;&nbsp; 🟢 yours &nbsp;&nbsp; ⬜ available</div>
+    </div>
+    <a href="#pricing"><button style="width:100%;max-width:400px;padding:18px;background:#43B02A;color:#fff;font-size:17px;font-weight:800;border:none;border-radius:14px;cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;transition:all .2s;" id="urgency-cta" onmouseover="this.style.background='#2d8a1a'" onmouseout="this.style.background='#43B02A'">Claim My Spot — $24.90 →</button></a>
+    <div style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:12px;" id="urgency-guarantee">🔒 7-day money back guarantee · No App Store needed</div>
+  </div>
+</section>
+
 <!-- PRICING -->
 <section class="pricing-section" id="pricing">
   <div class="section-inner">
@@ -491,7 +580,7 @@ footer{background:var(--dark);padding:40px 24px;}
     <p class="section-sub" id="price-sub2">No subscription. No monthly fees. Pay once, use forever.</p>
     <div class="pricing-card fade-up">
       <div class="price-old" id="price-old">$24.90</div>
-      <div class="price-tag" id="price-tag">$9.99</div>
+      <div class="price-tag" id="price-tag">$24.90</div>
       <div class="price-sub" id="price-sub">Launch price · One-time payment</div>
       <div class="price-list">
         <div class="price-item"><div class="price-check">✓</div><span id="pl1">Unlimited families</span></div>
@@ -507,7 +596,7 @@ footer{background:var(--dark);padding:40px 24px;}
         <div class="price-item"><div class="price-check">✓</div><span id="pl11">Free updates forever</span></div>
       </div>
       <!-- Replace # with your Gumroad link -->
-      <a href="#"><button class="btn-buy" id="cta-buy">Get NannyTrack — $9.99</button></a>
+      <a href="#"><button class="btn-buy" id="cta-buy">Get NannyTrack — $24.90</button></a>
       <div class="price-guarantee" id="price-guarantee">🔒 7-day money back guarantee · Instant access · No App Store needed</div>
     </div>
   </div>
@@ -527,7 +616,7 @@ footer{background:var(--dark);padding:40px 24px;}
   <h2 id="final-title">Start Getting Paid What You Deserve</h2>
   <p id="final-sub">Join hundreds of nannies, babysitters and caregivers already using NannyTrack.</p>
   <a href="#pricing"><button class="btn-primary" id="final-cta-btn">Start Getting Paid Correctly →</button></a>
-  <div class="final-note" id="final-note">🔥 Launch offer — only <strong>14 spots</strong> left at this price</div>
+  <div class="final-note" id="final-note">🔥 Launch offer — only <strong>14 spots</strong> left at $24.90</div>
 </section>
 
 <!-- FOOTER -->
@@ -549,13 +638,13 @@ footer{background:var(--dark);padding:40px 24px;}
 <script>
 const COPY = {
   en: {
-    'banner-text':'Launch offer — First 20 buyers: $24.90 → $9.99',
+    'banner-text':'Launch offer — First 20 buyers: $49.90 → $24.90',
     'banner-spots':'14 spots remaining','banner-cta':'Claim Offer →',
     'nav-cta':'Start Free Trial',
     'who-pills':'<span class="who-pill">👶 Nanny</span><span class="who-pill">🍼 Babysitter</span><span class="who-pill">👴 Elder Caregiver</span><span class="who-pill">🏠 Au Pair</span><span class="who-pill">👩‍⚕️ Home Care Aide</span>',
     'hero-title':'Get Paid What You Deserve.<br>Every Hour. Every Week.',
     'hero-sub':'The app built for caregivers — tracks hours, calculates overtime automatically and generates professional invoices in seconds.',
-    'hero-cta1':'Get NannyTrack — $9.99','hero-cta2':'See How It Works ↓',
+    'hero-cta1':'Get NannyTrack — $24.90','hero-cta2':'See How It Works ↓',
     'hero-note':'One-time payment · No subscription · Works on iPhone & Android · 7-day guarantee',
     'stat1':'states covered','stat2':'languages','stat3':'monthly fees',
     'pain-label':'The problem','pain-title':'Sound familiar?',
@@ -607,19 +696,19 @@ const COPY = {
     't3':'"At tax time I just opened the app and had everything — total earnings, overtime, invoices. My accountant was impressed!"',
     'ta1':'Maria S. — Nanny in Los Angeles, CA','ta2':'Ana C. — Au Pair in Miami, FL','ta3':'Jessica M. — Elder Caregiver in New York, NY',
     'price-label':'Pricing','price-title':'One simple price','price-sub2':'No subscription. No monthly fees. Pay once, use forever.',
-    'price-old':'$24.90','price-tag':'$9.99','price-sub':'Launch price · One-time payment',
+    'price-old':'$49.90','price-tag':'$24.90','price-sub':'Launch price · One-time payment',
     'pl1':'Unlimited families','pl2':'Automatic OT for all 50 states','pl3':'Professional invoices + PDF',
     'pl4':'Payment tracking','pl5':'Employment contract included','pl6':'Expense tracking with receipts',
     'pl7':'Schedule with US holidays','pl8':'Annual earnings for tax season',
     'pl9':'Works on iPhone & Android','pl10':'English, Portuguese & Spanish','pl11':'Free updates forever',
-    'cta-buy':'Claim My Copy — $9.99',
+    'cta-buy':'Claim My Copy — $24.90',
     'price-guarantee':'🔒 7-day money back guarantee · Instant access · No App Store needed',
     'faq-label':'FAQ','faq-title':'Frequently asked questions',
     'final-title':'Start Getting Paid What You Deserve',
     'final-sub':'Join hundreds of nannies, babysitters and caregivers already using NannyTrack.',
     'final-cta-btn':'Start Getting Paid Correctly →',
-    'final-note':'🔥 Launch offer — only <strong>14 spots</strong> left at this price',
-    'footer-sub':'Built with love for caregivers everywhere',
+    'final-note':'🔥 Launch offer — only <strong>14 spots</strong> left at $24.90',
+    'timer-label':'OFFER EXPIRES IN','tl-h':'hours','tl-m':'min','tl-s':'sec','urgency-badge':'🔥 LIMITED TIME OFFER','urgency-title':'First 20 buyers get<br><span style="color:#43B02A;">50% off</span> — forever.','urgency-sub':'After the first 20 sales, the price goes back to $49.90. No exceptions. No coupon needed — just buy now.','urgency-once':'one-time · no subscription','ul1':'Unlimited families','ul2':'All 50 states OT calculated','ul3':'Employment contract included','ul4':'Free updates forever','urgency-spots-label':'spots remaining at launch price','urgency-legend':'🔴 taken &nbsp;&nbsp; 🟢 yours &nbsp;&nbsp; ⬜ available','urgency-cta':'Claim My Spot — $24.90 →','urgency-guarantee':'🔒 7-day money back guarantee · No App Store needed','footer-sub':'Built with love for caregivers everywhere',
     'fl1':'Privacy Policy','fl2':'Terms of Use','fl3':'Contact',
     faqs:[
       {q:'Who is NannyTrack for?',a:'NannyTrack is for anyone who provides in-home care — nannies, babysitters, au pairs, elder caregivers, home care aides and any domestic worker paid by the hour.'},
@@ -632,13 +721,13 @@ const COPY = {
     ]
   },
   pt: {
-    'banner-text':'Oferta de lançamento — Primeiros 20 compradores: $24.90 → $9.99',
+    'banner-text':'Oferta de lançamento — Primeiros 20 compradores: $49.90 → $24.90',
     'banner-spots':'14 vagas restantes','banner-cta':'Garantir Oferta →',
     'nav-cta':'Experimentar Agora',
     'who-pills':'<span class="who-pill">👶 Babá</span><span class="who-pill">🍼 Babysitter</span><span class="who-pill">👴 Cuidadora de Idosos</span><span class="who-pill">🏠 Au Pair</span><span class="who-pill">👩‍⚕️ Cuidadora Domiciliar</span>',
     'hero-title':'Receba o Que Você Merece.<br>Toda Hora. Toda Semana.',
     'hero-sub':'O app feito para cuidadores — registra horas, calcula hora extra automaticamente e gera faturas profissionais em segundos.',
-    'hero-cta1':'Obter NannyTrack — $9.99','hero-cta2':'Ver Como Funciona ↓',
+    'hero-cta1':'Obter NannyTrack — $24.90','hero-cta2':'Ver Como Funciona ↓',
     'hero-note':'Pagamento único · Sem assinatura · Funciona no iPhone e Android · Garantia de 7 dias',
     'stat1':'estados cobertos','stat2':'idiomas','stat3':'mensalidade',
     'pain-label':'O problema','pain-title':'Parece familiar?',
@@ -690,19 +779,19 @@ const COPY = {
     't3':'"Na época do imposto abri o app e tinha tudo — ganhos totais, hora extra, faturas. Meu contador ficou impressionado!"',
     'ta1':'Maria S. — Babá em Los Angeles, CA','ta2':'Ana C. — Au Pair em Miami, FL','ta3':'Jessica M. — Cuidadora em Nova York, NY',
     'price-label':'Preço','price-title':'Um preço simples','price-sub2':'Sem assinatura. Sem mensalidade. Pague uma vez, use para sempre.',
-    'price-old':'$24.90','price-tag':'$9.99','price-sub':'Preço de lançamento · Pagamento único',
+    'price-old':'$49.90','price-tag':'$24.90','price-sub':'Preço de lançamento · Pagamento único',
     'pl1':'Famílias ilimitadas','pl2':'Hora extra automática para todos os 50 estados','pl3':'Faturas profissionais + PDF',
     'pl4':'Controle de pagamentos','pl5':'Contrato de trabalho incluído','pl6':'Despesas com foto de recibo',
     'pl7':'Agenda com feriados americanos','pl8':'Ganhos anuais para imposto de renda',
     'pl9':'Funciona no iPhone e Android','pl10':'Inglês, Português e Espanhol','pl11':'Atualizações gratuitas para sempre',
-    'cta-buy':'Garantir Meu Acesso — $9.99',
+    'cta-buy':'Garantir Meu Acesso — $24.90',
     'price-guarantee':'🔒 Garantia de 7 dias · Acesso imediato · Sem App Store',
     'faq-label':'FAQ','faq-title':'Perguntas frequentes',
     'final-title':'Comece a Receber o Que Você Merece',
     'final-sub':'Junte-se a centenas de babás e cuidadoras já usando o NannyTrack.',
     'final-cta-btn':'Comece a Receber o Que Merece →',
     'final-note':'🔥 Oferta de lançamento — apenas <strong>14 vagas</strong> neste preço',
-    'footer-sub':'Feito com carinho para cuidadoras em todo o mundo',
+    'timer-label':'OFERTA EXPIRA EM','tl-h':'horas','tl-m':'min','tl-s':'seg','urgency-badge':'🔥 OFERTA POR TEMPO LIMITADO','urgency-title':'Os primeiros 20 compradores ganham<br><span style="color:#43B02A;">50% de desconto</span> — para sempre.','urgency-sub':'Após as primeiras 20 vendas, o preço volta para $49.90. Sem exceções. Sem cupom — só compre agora.','urgency-once':'pagamento único · sem assinatura','ul1':'Famílias ilimitadas','ul2':'OT calculado para todos os 50 estados','ul3':'Contrato de trabalho incluído','ul4':'Atualizações gratuitas para sempre','urgency-spots-label':'vagas restantes no preço de lançamento','urgency-legend':'🔴 ocupado &nbsp;&nbsp; 🟢 seu &nbsp;&nbsp; ⬜ disponível','urgency-cta':'Garantir Minha Vaga — $24.90 →','urgency-guarantee':'🔒 Garantia de 7 dias · Sem App Store','footer-sub':'Feito com carinho para cuidadoras em todo o mundo',
     'fl1':'Política de Privacidade','fl2':'Termos de Uso','fl3':'Contato',
     faqs:[
       {q:'Para quem é o NannyTrack?',a:'Para qualquer pessoa que preste cuidados domiciliares — babás, babysitters, au pairs, cuidadoras de idosos e qualquer trabalhador doméstico que recebe por hora.'},
@@ -715,13 +804,13 @@ const COPY = {
     ]
   },
   es: {
-    'banner-text':'Oferta de lanzamiento — Primeros 20 compradores: $24.90 → $9.99',
+    'banner-text':'Oferta de lanzamiento — Primeros 20 compradores: $49.90 → $24.90',
     'banner-spots':'14 lugares restantes','banner-cta':'Reclamar Oferta →',
     'nav-cta':'Probar Ahora',
     'who-pills':'<span class="who-pill">👶 Niñera</span><span class="who-pill">🍼 Babysitter</span><span class="who-pill">👴 Cuidadora de Ancianos</span><span class="who-pill">🏠 Au Pair</span><span class="who-pill">👩‍⚕️ Aide Domiciliaria</span>',
     'hero-title':'Cobra Lo Que Mereces.<br>Cada Hora. Cada Semana.',
     'hero-sub':'La app hecha para cuidadores — registra horas, calcula horas extra automáticamente y genera facturas profesionales en segundos.',
-    'hero-cta1':'Obtener NannyTrack — $9.99','hero-cta2':'Ver Cómo Funciona ↓',
+    'hero-cta1':'Obtener NannyTrack — $24.90','hero-cta2':'Ver Cómo Funciona ↓',
     'hero-note':'Pago único · Sin suscripción · Funciona en iPhone y Android · Garantía de 7 días',
     'stat1':'estados cubiertos','stat2':'idiomas','stat3':'cuota mensual',
     'pain-label':'El problema','pain-title':'¿Te suena familiar?',
@@ -773,19 +862,19 @@ const COPY = {
     't3':'"En la época de impuestos abrí la app y tenía todo — ganancias totales, horas extra, facturas. ¡Mi contador quedó impresionado!"',
     'ta1':'Maria S. — Niñera en Los Ángeles, CA','ta2':'Ana C. — Au Pair en Miami, FL','ta3':'Jessica M. — Cuidadora en Nueva York, NY',
     'price-label':'Precio','price-title':'Un precio simple','price-sub2':'Sin suscripción. Sin cuotas mensuales. Paga una vez, úsala para siempre.',
-    'price-old':'$24.90','price-tag':'$9.99','price-sub':'Precio de lanzamiento · Pago único',
+    'price-old':'$49.90','price-tag':'$24.90','price-sub':'Precio de lanzamiento · Pago único',
     'pl1':'Familias ilimitadas','pl2':'Horas extra automáticas para los 50 estados','pl3':'Facturas profesionales + PDF',
     'pl4':'Control de pagos','pl5':'Contrato de trabajo incluido','pl6':'Gastos con foto de recibo',
     'pl7':'Agenda con días festivos de EE.UU.','pl8':'Ganancias anuales para impuestos',
     'pl9':'Funciona en iPhone y Android','pl10':'Inglés, Portugués y Español','pl11':'Actualizaciones gratuitas para siempre',
-    'cta-buy':'Reclamar Mi Copia — $9.99',
+    'cta-buy':'Reclamar Mi Copia — $24.90',
     'price-guarantee':'🔒 Garantía de 7 días · Acceso inmediato · Sin App Store',
     'faq-label':'FAQ','faq-title':'Preguntas frecuentes',
     'final-title':'Empieza a Cobrar Lo Que Mereces',
     'final-sub':'Únete a cientos de niñeras y cuidadoras que ya usan NannyTrack.',
     'final-cta-btn':'Empieza a Cobrar Lo Que Mereces →',
     'final-note':'🔥 Oferta de lanzamiento — solo <strong>14 lugares</strong> a este precio',
-    'footer-sub':'Hecho con amor para cuidadoras en todo el mundo',
+    'timer-label':'OFERTA EXPIRA EN','tl-h':'horas','tl-m':'min','tl-s':'seg','urgency-badge':'🔥 OFERTA POR TIEMPO LIMITADO','urgency-title':'Los primeros 20 compradores obtienen<br><span style="color:#43B02A;">50% de descuento</span> — para siempre.','urgency-sub':'Después de las primeras 20 ventas, el precio vuelve a $49.90. Sin excepciones. Sin cupón — solo compra ahora.','urgency-once':'pago único · sin suscripción','ul1':'Familias ilimitadas','ul2':'Horas extra calculadas para los 50 estados','ul3':'Contrato de trabajo incluido','ul4':'Actualizaciones gratuitas para siempre','urgency-spots-label':'lugares restantes al precio de lanzamiento','urgency-legend':'🔴 ocupado &nbsp;&nbsp; 🟢 tuyo &nbsp;&nbsp; ⬜ disponible','urgency-cta':'Reclamar Mi Lugar — $24.90 →','urgency-guarantee':'🔒 Garantía de 7 días · Sin App Store','footer-sub':'Hecho con amor para cuidadoras en todo el mundo',
     'fl1':'Política de Privacidad','fl2':'Términos de Uso','fl3':'Contacto',
     faqs:[
       {q:'¿Para quién es NannyTrack?',a:'Para cualquiera que brinde cuidados en el hogar — niñeras, babysitters, au pairs, cuidadoras de ancianos y cualquier trabajador doméstico que cobra por hora.'},
@@ -849,24 +938,51 @@ const observer=new IntersectionObserver(entries=>{
 },{threshold:0.1})
 document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el))
 
+// Countdown timer — 24h from first visit, stored in localStorage
+function startCountdown() {
+  const key = 'nt_timer_end'
+  let end = localStorage.getItem(key)
+  if (!end) {
+    end = Date.now() + 24 * 60 * 60 * 1000
+    localStorage.setItem(key, end)
+  }
+  end = parseInt(end)
+  function update() {
+    const diff = end - Date.now()
+    if (diff <= 0) {
+      document.getElementById('timer-h').textContent = '00'
+      document.getElementById('timer-m').textContent = '00'
+      document.getElementById('timer-s').textContent = '00'
+      return
+    }
+    const h = Math.floor(diff / 3600000)
+    const m = Math.floor((diff % 3600000) / 60000)
+    const s = Math.floor((diff % 60000) / 1000)
+    document.getElementById('timer-h').textContent = String(h).padStart(2,'0')
+    document.getElementById('timer-m').textContent = String(m).padStart(2,'0')
+    document.getElementById('timer-s').textContent = String(s).padStart(2,'0')
+  }
+  update()
+  setInterval(update, 1000)
+}
+startCountdown()
+
 renderFaqs('en')
 
 // Hide nav on scroll down, show on scroll up
 let lastScroll = 0
-const nav = document.querySelector('nav')
-const banner = document.querySelector('.launch-banner')
+const navEl = document.querySelector('nav')
+const bannerEl = document.querySelector('.launch-banner')
 window.addEventListener('scroll', () => {
   const cur = window.scrollY
-  if (cur > lastScroll && cur > 100) {
-    nav.classList.add('nav-hidden')
-    banner.style.transform = 'translateY(-100%)'
-    nav.style.transform = 'translateY(-140px)'
+  if (cur > lastScroll && cur > 80) {
+    bannerEl.style.transform = 'translateY(-100%)'
+    navEl.style.top = '0px'
   } else {
-    nav.classList.remove('nav-hidden')
-    banner.style.transform = 'translateY(0)'
-    nav.style.transform = 'translateY(0)'
+    bannerEl.style.transform = 'translateY(0)'
+    navEl.style.top = '40px'
   }
-  lastScroll = cur
+  lastScroll = cur <= 0 ? 0 : cur
 }, {passive: true})
 </script>
 </body>
